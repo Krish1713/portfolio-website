@@ -327,5 +327,9 @@ form button[type="submit"]:hover {
     .tab-contents ul li {
         font-size: 14px; 
     }
+     .contact-left h1.sub-title {
+        font-size: 25px; 
+        padding-bottom: 20px; 
+    }
 }
 
