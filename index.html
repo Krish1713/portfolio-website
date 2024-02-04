@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content= "IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krish Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9f694c8a5b.js" crossorigin="anonymous"></script>
+</head> 
+<body>
+    <!-- Home -->
+    <div id="header">
+        <div class="container">
+            <!--logo here if wanted--> 
+            <nav>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#projects">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hello, I'm <span>Krish</span> Patel<br> From Cincinnati, Ohio</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- About me -->
+    <div id="about-me">
+        <div class="container">
+            <div class="about-col-1">
+                <h1>About Me</h1>
+            </div>
+            <div class="about-me-text">
+                <h1>I am Krish Patel. I am deeply passionate about computer science and plan on pursuing a career in it. 
+                    I dedicated many years of my life in researching and learning more about this field. Due to my passion
+                    I have worked on various projects related to computer science.</h1>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python</span> (intermediate)</li>
+                        <li><span>Java</span> (Beginner)</li>
+                        <li><span>HTML, CSS, JS</span> (Beginner)</li>
+                        <li><span>C++</span> (Beginner)</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Sycamore High School</span> Class of 2023</li>
+                        <li><span>University of Cincinnati</span> Class of 2027</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Experience-->
+<div id="projects">
+    <div class= "container">
+        <h1 class="sub-title">Experience</h1>
+        <div class = "project-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Lecture-Note Taker</h2>
+                <p>A python script that takes a audio recording of lectures as input and provides user with instant notes for the recorded lecture.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-chess"></i>
+                <h2>Local Two-player Chess Game</h2>
+                <p>A simplistic web-based chess game where two players can play against each other on the same device.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-certificate"></i>
+                <h2>Cybersecurity Certification</h2>
+                <p>Got certification in cybersecurity using google career certificates program.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+        </div>
+    </div>
+   
+</div>
+<!--Contact-->
+<!--Contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row" style="display: flex;"> <!-- Add display: flex here -->
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>Patel6k8@mail.uc.edu | Krishvijaypatel@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+1(513)801-9651</p>
+                <p><i class="fa-brands fa-github"></i></p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <h1>Any further questions? fill out this form</h1>
+                <form method="post" action="https://script.google.com/macros/s/AKfycby0hbwy9ansCxOQIZGVydHjvau0lhGh5ZBdDGweSa4uFunPXNqFGKpl1EjmYrcCoHSA/exec" name="contact-form">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</div>
+    <script>
+        function opentab(tabname) {
+            var tablinks = document.querySelectorAll('.tab-links');
+            var tabcontents = document.querySelectorAll('.tab-contents');
+
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove('active-link');
+                tabcontents[i].classList.remove('active-tab');
+            }
+
+            document.getElementById(tabname).classList.add('active-tab');
+            event.currentTarget.classList.add('active-link');
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby0hbwy9ansCxOQIZGVydHjvau0lhGh5ZBdDGweSa4uFunPXNqFGKpl1EjmYrcCoHSA/exec'
+
+const form = document.forms['contact-form']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+    </script>
+</body>
+</html>
