@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content= "IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI Note-Taker</title>
+    <link rel="stylesheet" href="lecture_note_style.css">
+    <script src="https://kit.fontawesome.com/9f694c8a5b.js" crossorigin="anonymous"></script>
+</head> 
+<body>
+    <div id="about-me">
+        <div class="container">
+            <div class="about-col-1">
+                <h1>GenAI Note-Taker</h1>
+            </div>
+            <div class="about-me-text">
+                <p>As I got to college, I realized that the coursework was very fast-paced and rigourous. Everyday I would wake up, go to class, take notes, do homework, and
+                    the cycle never seemed to stop. One of the most cruicial aspects of class for me was to take notes. Notes were very important, as they were often key resources to 
+                    study for any test or exam. I took notes for almost every class, but due to the limited time and the fast-pace I realized that takings notes and processing the 
+                    information provided from the professor was difficult. That is why I thought about making this project. To assist me and others like me in taking notes and actually
+                    understaind what the coursework, instead of just writing in class for the whole time.
+                </p>
+                <p style="text-indent: 25px;">To build a script that can take notes, I had to start with getting a transcript of the audio itself. To do this I used Google Cloud Services API that will used
+                    a audio recording sumbited by me to then process it and give me a transcript in return. Now that I received the transcript, I tested it on various audio files, to see
+                    its accuracy. Once I felt that the process worked good enough, I proceeded to get Open AI's API to send in the transcript as a user input and use generative AI to 
+                    create categorized notes for me. To finish this whole project off, I made the input of the files linked to a cloud storage system from Google Cloud Services.
+                </p>
+                <p style="text-indent: 25px;">
+                        Some future upgrades I would make to this project include: a user interface, easier cloud file upload and synchonization to the user interface.
+                </p>
+            </div>
+            <div class="back">
+                <a href="index.html"><i class="fa-solid fa-backward"></i> Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
