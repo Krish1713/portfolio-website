@@ -179,6 +179,20 @@ nav ul li a:hover:after {
     transform: translateY(10px);
 }
 /* ---contact--- */
+.btn{
+    display: inline-block;
+    color:#fff;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #157FEB;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #0d5ea5;
+}
 .contact-left {
     padding-top: 120px;
     font-size: 30px;
@@ -235,6 +249,14 @@ form textarea {
     color: #fff;
     font-size: 18px;
     border-radius: 6px;
+}
+form button[type="download"] {
+    background-color: #157FEB; 
+    color: #fff; 
+    padding: 15px 30px; 
+    font-size: 18px; 
+    border: none; 
+    border-radius: 6px;  
 }
 form button[type="submit"] {
     background-color: #157FEB; 
@@ -327,7 +349,7 @@ form button[type="submit"]:hover {
     .tab-contents ul li {
         font-size: 14px; 
     }
-     .contact-left h1.sub-title {
+    .contact-left h1.sub-title {
         font-size: 25px; 
         padding-bottom: 20px; 
     }
